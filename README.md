@@ -9,10 +9,10 @@ Extraia o ZIP e abra `index.html` no navegador. No VS Code, também pode usar Li
 ## Organização
 
 - `index.html`: Início.
-- `sobre.html`: Sobre mim.
-- `projetos.html`: Projetos.
-- `tecnologias.html`: Tecnologias.
-- `contato.html`: Contato.
+- `pages/sobre.html`: Sobre mim.
+- `pages/projetos.html`: Projetos.
+- `pages/tecnologias.html`: Tecnologias.
+- `pages/contato.html`: Contato.
 - `assets/css/style.css`: layout, cores, transparência e responsividade.
 - `assets/js/config.js`: seus links de GitHub, LinkedIn e e-mail.
 - `assets/js/main.js`: menu mobile, contatos e ano automático.
@@ -42,3 +42,11 @@ O rodapé ocupa o final da tela quando há pouco conteúdo e acompanha o final d
 Envie o conteúdo desta pasta para a raiz do repositório, mantendo `index.html` na raiz. Em Settings → Pages, use a publicação pela branch e selecione a pasta raiz. Os caminhos relativos funcionam tanto em domínio próprio como em endereço com nome de repositório. Não há backend nem Node.js em produção.
 
 Antes de publicar, preencha seus contatos e personalize o título e a meta description de cada página. Esta base não inclui integração com API do GitHub ou conteúdo de projetos, pois o centro foi deixado para edição manual.
+
+## Correções desta versão
+
+As páginas internas ficam em `pages/`; a página inicial permanece na raiz, como exigido pelo GitHub Pages. CSS, JavaScript e imagens ficam em `assets/`. As pastas vazias e duplicadas `html/`, `css/` e `js/` foram removidas. Todos os caminhos de navegação, scripts, estilos e avatar foram ajustados.
+
+O botão Menu e o ícone aparecem somente em telas de até 640 px, com JavaScript habilitado. Acima desse limite os links ficam visíveis e o botão oculto. Ao atravessar esse limite, o menu fecha e seu estado acessível é atualizado. Sem JavaScript, os links continuam acessíveis em todas as telas.
+
+Para atualizar um repositório existente, substitua os arquivos do site e remova as antigas páginas internas da raiz e as pastas vazias citadas acima. Preserve a pasta `.git` do seu repositório; o ZIP de entrega contém apenas o código-fonte do site.

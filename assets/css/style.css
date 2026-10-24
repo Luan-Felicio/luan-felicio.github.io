@@ -48,7 +48,7 @@ button { font: inherit; }
 .social-links:empty { display: none; }
 .social-links a { transition: color .2s; }
 .social-links a:hover { color: var(--blue); }
-.menu-toggle { border: 0; background: transparent; color: var(--text); padding: 10px; cursor: pointer; align-items: center; gap: 18px; }
+.menu-toggle { display: none; border: 0; background: transparent; color: var(--text); padding: 10px; cursor: pointer; align-items: center; gap: 18px; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 20; background: white; padding: 12px; border-radius: 8px; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 @media (max-width: 1000px) {

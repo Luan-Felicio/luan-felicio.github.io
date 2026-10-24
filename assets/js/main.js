@@ -28,11 +28,20 @@ document.querySelectorAll("[data-social]").forEach(link => {
 const navigation = document.querySelector(".navigation");
 const toggle = document.querySelector(".menu-toggle");
 if (navigation && toggle) {
-  toggle.hidden = false;
+  const mobileViewport = window.matchMedia("(max-width: 640px)");
   function closeMenu() {
     navigation.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
   }
+  function syncMenu() {
+    toggle.hidden = !mobileViewport.matches;
+    closeMenu();
+  }
+  syncMenu();
+  mobileViewport.addEventListener("change", syncMenu);
+  navigation.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
   toggle.addEventListener("click", () => {
     const open = navigation.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(open));

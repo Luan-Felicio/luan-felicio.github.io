@@ -47,6 +47,8 @@ Antes de publicar, preencha seus contatos e personalize o título e a meta descr
 
 As páginas internas ficam em `pages/`; a página inicial permanece na raiz, como exigido pelo GitHub Pages. CSS, JavaScript e imagens ficam em `assets/`. As pastas vazias e duplicadas `html/`, `css/` e `js/` foram removidas. Todos os caminhos de navegação, scripts, estilos e avatar foram ajustados.
 
-O botão Menu e o ícone aparecem somente em telas de até 640 px, com JavaScript habilitado. Acima desse limite os links ficam visíveis e o botão oculto. Ao atravessar esse limite, o menu fecha e seu estado acessível é atualizado. Sem JavaScript, os links continuam acessíveis em todas as telas.
+O botão Menu e o ícone aparecem somente em telas de até 430 px, com JavaScript habilitado. Acima desse limite os links ficam visíveis e o botão oculto. Ao atravessar esse limite, o menu fecha e seu estado acessível é atualizado. Sem JavaScript, os links continuam acessíveis em todas as telas.
 
 Para atualizar um repositório existente, substitua os arquivos do site e remova as antigas páginas internas da raiz e as pastas vazias citadas acima. Preserve a pasta `.git` do seu repositório; o ZIP de entrega contém apenas o código-fonte do site.
+
+Entre 431 e 640 px, os links permanecem visíveis e podem ocupar mais de uma linha. O cabeçalho mantém identidade e navegação em blocos separados para evitar sobreposição.

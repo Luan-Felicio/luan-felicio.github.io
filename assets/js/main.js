@@ -28,7 +28,7 @@ document.querySelectorAll("[data-social]").forEach(link => {
 const navigation = document.querySelector(".navigation");
 const toggle = document.querySelector(".menu-toggle");
 if (navigation && toggle) {
-  const mobileViewport = window.matchMedia("(max-width: 640px)");
+  const mobileViewport = window.matchMedia("(max-width: 430px)");
   function closeMenu() {
     navigation.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
